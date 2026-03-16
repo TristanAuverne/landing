@@ -7,14 +7,14 @@ Site marketing statique HTML/CSS/JS pour `auverne.com`, orienté SEO et prêt à
 - `index.html` : page d'accueil
 - `fonctionnalites.html` : page fonctionnalités
 - `tarifs.html` : page tarifs
-- `logiciel-couts-alimentaires.html` : page SEO "logiciel de gestion des coûts alimentaires"
-- `calcul-cout-recette.html` : page SEO "calcul coût recette"
-- `gestion-ingredients.html` : page SEO "gestion des ingrédients"
+- `pages/logiciel-couts-alimentaires.html` : page SEO "logiciel de gestion des coûts alimentaires"
+- `pages/calcul-cout-recette.html` : page SEO "calcul coût recette"
+- `pages/gestion-ingredients.html` : page SEO "gestion des ingrédients"
 - `contact.html` : formulaire de contact
 - `robots.txt` : directives d'indexation
 - `sitemap.xml` : sitemap XML des pages publiques
-- `logo-auverne.png` : logo utilisé dans le header/footer
-- `og-image.png` : image Open Graph (placeholder actuel)
+- `assets/img/logo-auverne.png` : logo utilisé dans le header/footer
+- `assets/img/og-image.png` : image Open Graph
 - `favicon.ico` : favicon (placeholder actuel)
 - `assets/css/style.css` : design system et styles communs
 - `assets/js/main.js` : JS minimal (menu mobile + année dynamique)
@@ -42,7 +42,7 @@ Puis ouvrir `http://localhost:8000`.
 - Placer les nouvelles images dans `assets/images/`.
 - Utiliser des noms explicites (ex: `dashboard-couts.webp`).
 - Compresser les images avant mise en production.
-- Mettre à jour `og-image.png` avec une vraie image de partage social.
+- Mettre à jour `assets/img/og-image.png` avec une vraie image de partage social.
 - Remplacer `favicon.ico` par une vraie icône multi-format.
 
 ## Déploiement sur Vercel
