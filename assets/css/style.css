@@ -596,30 +596,48 @@ li {
   z-index: -1;
 }
 
+.pricing-hero {
+  padding: clamp(2.4rem, 4vw, 3.2rem) 0 clamp(2rem, 4vw, 2.8rem);
+}
+
+.pricing-hero .container {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.page-hero.pricing-hero h1,
 .pricing-hero h1 {
-  max-width: 18ch;
+  max-width: 24ch;
   margin-bottom: 0.85rem;
 }
 
 .pricing-hero p {
-  max-width: 64ch;
-}
-
-.pricing-hero {
-  padding: clamp(2.6rem, 5vw, 3.6rem) 0 clamp(2.2rem, 4.5vw, 3.1rem);
-}
-
-.pricing-hero .container {
-  width: min(940px, calc(100% - 2rem));
-  margin-inline: auto;
+  max-width: 62ch;
 }
 
 .pricing-note {
-  margin-top: var(--space-3);
-  margin-bottom: 0;
-  max-width: 62ch;
-  font-size: 0.9rem;
-  color: #c8c1b4;
+  max-width: 58ch;
+}
+
+@media (min-width: 1040px) {
+  .pricing-hero .container {
+    width: min(1240px, calc(100% - 3rem));
+  }
+
+  .page-hero.pricing-hero h1,
+  .pricing-hero h1 {
+    max-width: 25ch;
+    font-size: clamp(3.8rem, 6vw, 5.5rem);
+    line-height: 0.96;
+  }
+
+  .pricing-hero p {
+    max-width: 60ch;
+  }
+
+  .pricing-note {
+    max-width: 56ch;
+  }
 }
 
 .pricing-section h2 {
