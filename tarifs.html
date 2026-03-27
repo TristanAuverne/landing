@@ -43,18 +43,28 @@
           <a class="btn btn-primary" href="/contact.html">Demander une démo</a>
           <a class="btn btn-secondary" href="#plans">Voir les plans</a>
         </div>
-        <p class="pricing-note">Les tarifs ne sont pas publics: le bon niveau dépend de votre périmètre, de vos recettes et de votre organisation.</p>
+        <p class="pricing-note">Deux niveaux clairs pour démarrer rapidement. Une offre Enterprise sur devis pour les organisations plus structurées.</p>
       </div>
     </section>
 
     <section id="plans" class="section-tight pricing-section">
-      <div class="container">
+      <div class="container" data-billing-root data-billing="monthly">
+        <div class="pricing-billing" role="group" aria-label="Choix de facturation">
+          <button class="pricing-billing-btn is-active" type="button" data-billing-option="monthly" aria-pressed="true">Mensuel</button>
+          <button class="pricing-billing-btn" type="button" data-billing-option="annual" aria-pressed="false">Annuel</button>
+          <span class="pricing-billing-save" data-billing-save>Économisez avec l’annuel</span>
+        </div>
+
         <div class="pricing-grid">
           <article class="card pricing-card">
             <p class="pricing-code">ESSENTIAL</p>
             <h2>Essentiel Operations</h2>
             <p class="pricing-tagline">Structurer la production</p>
             <p class="pricing-stage">Niveau 1 - Exécution</p>
+            <div class="pricing-price" data-price data-monthly="99" data-annual="89">
+              <p class="pricing-amount"><span data-price-value>99</span> <span class="pricing-currency">CAD</span> <span class="pricing-period">/ mois</span></p>
+              <p class="pricing-billing-note" data-billing-note>facturation mensuelle</p>
+            </div>
             <p class="pricing-fit">Pour qui: équipes qui veulent sortir d'Excel et fiabiliser leur base.</p>
             <p class="pricing-benefit">Bénéfice principal: vous quittez les fichiers dispersés et vous posez un socle propre pour exécuter sans friction.</p>
             <ul class="pricing-list">
@@ -63,7 +73,7 @@
               <li>Gestion des achats</li>
               <li>Coût de base</li>
             </ul>
-            <a class="btn btn-secondary pricing-card-cta" href="/contact.html">Démarrer avec Essentiel</a>
+            <a class="btn btn-secondary pricing-card-cta" href="/contact.html">Demander une démo</a>
           </article>
 
           <article class="card pricing-card pricing-card-featured">
@@ -72,6 +82,10 @@
             <h2>Pilotage Performance</h2>
             <p class="pricing-tagline">Piloter la rentabilité</p>
             <p class="pricing-stage">Niveau 2 - Décision</p>
+            <div class="pricing-price" data-price data-monthly="249" data-annual="219">
+              <p class="pricing-amount"><span data-price-value>249</span> <span class="pricing-currency">CAD</span> <span class="pricing-period">/ mois</span></p>
+              <p class="pricing-billing-note" data-billing-note>facturation mensuelle</p>
+            </div>
             <p class="pricing-fit">Pour qui: structures qui veulent savoir où leur marge fuit et arbitrer plus vite.</p>
             <p class="pricing-benefit">Bénéfice principal: vous identifiez les recettes à faible marge, vous priorisez les bons arbitrages, vous reprenez la main.</p>
             <ul class="pricing-list">
@@ -89,13 +103,17 @@
             <h2>Gouvernance Enterprise</h2>
             <p class="pricing-tagline">Scaler avec contrôle</p>
             <p class="pricing-stage">Niveau 3 - Organisation</p>
+            <div class="pricing-price pricing-price-enterprise">
+              <p class="pricing-amount">Sur devis</p>
+              <p class="pricing-billing-note">Tarification sur devis</p>
+            </div>
             <p class="pricing-fit">Pour qui: organisations qui alignent plusieurs équipes autour d'une gouvernance claire.</p>
             <p class="pricing-benefit">Bénéfice principal: vos équipes avancent avec des règles nettes, des responsabilités claires et des décisions centralisées.</p>
             <ul class="pricing-list">
               <li>Tout Pilotage Performance</li>
               <li>Gestion utilisateurs</li>
               <li>Gestion rôles</li>
-              <li>Backoffice lecture / écriture tenants</li>
+              <li>Pilotage centralisé des entités</li>
               <li>Gouvernance opérationnelle centralisée</li>
             </ul>
             <a class="btn btn-secondary pricing-card-cta" href="/contact.html">Parler gouvernance</a>

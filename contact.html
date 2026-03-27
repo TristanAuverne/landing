@@ -34,19 +34,23 @@
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero contact-hero">
       <div class="container">
         <span class="eyebrow">Contact</span>
-        <h1>Échangeons sur vos enjeux de coûts alimentaires</h1>
-        <p>Décrivez votre contexte de production, vos contraintes de pilotage et vos objectifs. Nous revenons vers vous rapidement avec une approche adaptée.</p>
+        <h1>Identifiez où votre marge fuit avant qu’elle ne disparaisse.</h1>
+        <p>En 30 minutes, vous voyez quelles recettes vous font perdre de l’argent et quoi ajuster en priorité.</p>
+        <ul class="contact-meta">
+          <li>Aucun engagement</li>
+          <li>Réponse rapide</li>
+          <li>Démo adaptée à votre activité</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section-tight">
-      <div class="container grid-2">
-        <article class="card">
-          <h2>Formulaire de prise de contact</h2>
-          <!-- Formulaire HTML prêt pour intégration backend future (API, service email ou outil CRM). -->
+    <section class="section-tight contact-qualify">
+      <div class="container contact-qualify-grid">
+        <article class="card contact-form-card">
+          <h2>Demander une démo</h2>
           <form class="form" method="post" action="#">
             <div class="form-row">
               <div>
@@ -60,20 +64,93 @@
             </div>
             <div>
               <label for="entreprise">Entreprise</label>
-              <input id="entreprise" name="entreprise" type="text" autocomplete="organization">
+              <input id="entreprise" name="entreprise" type="text" autocomplete="organization" required>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="recettes">Nombre de recettes</label>
+                <select id="recettes" name="recettes" required>
+                  <option value="">Sélectionner</option>
+                  <option>Moins de 50</option>
+                  <option>50 à 200</option>
+                  <option>200+</option>
+                </select>
+              </div>
+              <div>
+                <label for="equipe">Taille d’équipe</label>
+                <select id="equipe" name="equipe" required>
+                  <option value="">Sélectionner</option>
+                  <option>1 à 5</option>
+                  <option>5 à 20</option>
+                  <option>20+</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="probleme">Problème principal</label>
+              <select id="probleme" name="probleme" required>
+                <option value="">Sélectionner</option>
+                <option>Je ne connais pas mes coûts réels</option>
+                <option>Mes marges sont instables</option>
+                <option>J’utilise Excel mais ce n’est pas fiable</option>
+                <option>Je veux structurer mon pilotage</option>
+              </select>
             </div>
             <div>
               <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
-            <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+            <button class="btn btn-primary" type="submit">Demander une démo</button>
+            <p class="contact-form-note">Nous répondons sous 24h ouvrées.</p>
           </form>
         </article>
-        <article class="card">
-          <h2>Informations de contact</h2>
-          <p>Pour toute demande commerciale ou de partenariat, vous pouvez également nous écrire directement.</p>
-          <p><a class="btn btn-secondary" href="mailto:contact@auverne.com">contact@auverne.com</a></p>
-          <p>Nous privilégions des échanges concrets: données disponibles, organisation actuelle, objectifs de maîtrise des coûts matière.</p>
+
+        <article class="card contact-reassure-card">
+          <h2>Comment se passe la démo ?</h2>
+          <ul class="contact-list">
+            <li>Analyse rapide de votre fonctionnement actuel</li>
+            <li>Identification des zones de perte de marge</li>
+            <li>Démonstration adaptée à votre activité</li>
+          </ul>
+
+          <div class="contact-divider"></div>
+
+          <h3>Ce n’est pas pour vous si :</h3>
+          <ul class="contact-list contact-list-muted">
+            <li>Vous cherchez seulement un calculateur de recette</li>
+            <li>Vous ne suivez pas vos coûts matière</li>
+            <li>Vous n’avez pas de production structurée</li>
+          </ul>
+          <p class="contact-email-note">Option directe : <a href="mailto:contact@auverne.com">contact@auverne.com</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-outcomes">
+      <div class="container">
+        <span class="eyebrow">Valeur immédiate</span>
+        <h2>Ce que vous allez obtenir</h2>
+        <div class="contact-outcomes-grid">
+          <article class="card contact-outcome-card">
+            <p>Une vision claire du coût réel de vos recettes.</p>
+          </article>
+          <article class="card contact-outcome-card">
+            <p>L’identification des recettes à faible marge.</p>
+          </article>
+          <article class="card contact-outcome-card">
+            <p>Des décisions plus rapides et plus fiables.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight contact-final">
+      <div class="container">
+        <article class="cta-block contact-final-cta">
+          <span class="eyebrow">Passer à l’action</span>
+          <h2>Commencez par voir ce qui doit être corrigé en priorité.</h2>
+          <p>Un échange suffit souvent à révéler les premières recettes à revoir, les premières dérives à surveiller et les premières décisions à prendre.</p>
+          <a class="btn btn-primary" href="/contact.html">Demander une démo</a>
         </article>
       </div>
     </section>

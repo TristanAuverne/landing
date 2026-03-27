@@ -627,8 +627,8 @@ li {
   .page-hero.pricing-hero h1,
   .pricing-hero h1 {
     max-width: 24ch;
-    font-size: clamp(3.8rem, 6vw, 5.5rem);
-    line-height: 0.96;
+    font-size: clamp(3rem, 5.1vw, 4.3rem);
+    line-height: 0.98;
   }
 
   .pricing-hero p {
@@ -642,6 +642,43 @@ li {
 
 .pricing-section h2 {
   max-width: 24ch;
+}
+
+.pricing-billing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: var(--space-4);
+  padding: 0.33rem;
+  border: 1px solid rgba(202, 162, 92, 0.26);
+  border-radius: 999px;
+  background: rgba(14, 14, 14, 0.85);
+}
+
+.pricing-billing-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.42rem 0.92rem;
+  background: transparent;
+  color: #d2d2d2;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pricing-billing-btn.is-active {
+  color: #111;
+  background: linear-gradient(120deg, #cfab66 0%, #c0954c 100%);
+  box-shadow: 0 6px 14px rgba(202, 162, 92, 0.32);
+  transform: translateY(-1px);
+}
+
+.pricing-billing-save {
+  color: #e8d4b0;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  padding-inline: 0.35rem 0.7rem;
 }
 
 .pricing-grid,
@@ -685,6 +722,39 @@ li {
   color: #dcc69f;
 }
 
+.pricing-price {
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(202, 162, 92, 0.18);
+}
+
+.pricing-amount {
+  margin: 0;
+  color: #f4ede0;
+  font-size: clamp(1.8rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.pricing-currency,
+.pricing-period {
+  color: #d8ccb7;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.pricing-billing-note {
+  margin: 0.35rem 0 0;
+  color: #b8b2a7;
+  font-size: 0.83rem;
+}
+
+.pricing-price-enterprise .pricing-amount {
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+}
+
 .pricing-fit,
 .pricing-benefit {
   margin-bottom: 0.75rem;
@@ -726,7 +796,11 @@ li {
 .pricing-card-featured {
   border-color: rgba(202, 162, 92, 0.48);
   background: linear-gradient(165deg, #1c1a17 0%, #18130d 100%);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.42);
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.45);
+}
+
+.pricing-card-featured .pricing-amount {
+  color: #fbf1de;
 }
 
 .pricing-badge {
@@ -809,6 +883,7 @@ label {
 }
 
 input,
+select,
 textarea {
   width: 100%;
   border: 1px solid var(--surface-border);
@@ -820,6 +895,7 @@ textarea {
 }
 
 input:focus-visible,
+select:focus-visible,
 textarea:focus-visible {
   outline: 2px solid rgba(202, 162, 92, 0.5);
   outline-offset: 1px;
@@ -828,6 +904,133 @@ textarea:focus-visible {
 textarea {
   min-height: 145px;
   resize: vertical;
+}
+
+select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #bda276 50%),
+    linear-gradient(135deg, #bda276 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.2rem;
+}
+
+.contact-hero h1 {
+  max-width: 34ch;
+}
+
+.contact-hero p {
+  max-width: 60ch;
+}
+
+.contact-meta {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.contact-meta li {
+  margin: 0;
+  color: #d9c7a4;
+  font-size: 0.92rem;
+}
+
+.contact-meta li::before {
+  content: "•";
+  margin-right: 0.45rem;
+  color: var(--gold);
+}
+
+.contact-qualify-grid,
+.contact-outcomes-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.contact-form-card h2,
+.contact-reassure-card h2 {
+  margin-bottom: 0.8rem;
+}
+
+.contact-form-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.85rem;
+  color: #bcb5a8;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.68rem;
+}
+
+.contact-list li {
+  margin: 0;
+  color: #d6d0c3;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.contact-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: rgba(202, 162, 92, 0.85);
+}
+
+.contact-list-muted li {
+  color: #c7bdb0;
+}
+
+.contact-divider {
+  height: 1px;
+  margin: var(--space-4) 0;
+  background: linear-gradient(90deg, rgba(202, 162, 92, 0.35), rgba(202, 162, 92, 0.05));
+}
+
+.contact-email-note {
+  margin-top: var(--space-4);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #bfb7aa;
+}
+
+.contact-email-note a {
+  color: #e6d4b3;
+}
+
+.contact-outcomes h2 {
+  max-width: 18ch;
+}
+
+.contact-outcome-card {
+  border-color: rgba(202, 162, 92, 0.28);
+  background: linear-gradient(170deg, #171717 0%, #100f0d 100%);
+}
+
+.contact-outcome-card p {
+  margin: 0;
+  color: #ded7cb;
+}
+
+.contact-final-cta h2 {
+  max-width: 20ch;
+}
+
+.contact-final-cta p {
+  max-width: 66ch;
 }
 
 .site-footer {
@@ -917,6 +1120,15 @@ textarea {
   .pricing-choose-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .contact-qualify-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+
+  .contact-outcomes-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -968,6 +1180,20 @@ textarea {
 
   .pricing-card-featured {
     transform: none;
+  }
+
+  .pricing-billing {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    padding: 0.5rem;
+  }
+
+  .pricing-billing-save {
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem 0;
   }
 
   .pricing-note {
