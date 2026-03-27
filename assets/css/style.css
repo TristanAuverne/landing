@@ -597,12 +597,21 @@ li {
 }
 
 .pricing-hero h1 {
-  max-width: 16ch;
+  max-width: 18ch;
   margin-bottom: 0.85rem;
 }
 
 .pricing-hero p {
-  max-width: 58ch;
+  max-width: 64ch;
+}
+
+.pricing-hero {
+  padding: clamp(2.6rem, 5vw, 3.6rem) 0 clamp(2.2rem, 4.5vw, 3.1rem);
+}
+
+.pricing-hero .container {
+  width: min(940px, calc(100% - 2rem));
+  margin-inline: auto;
 }
 
 .pricing-note {
@@ -878,20 +887,6 @@ textarea {
 }
 
 @media (min-width: 760px) {
-  .pricing-hero .container {
-    position: relative;
-  }
-
-  .pricing-hero .container::after {
-    content: "";
-    position: absolute;
-    inset: -1.1rem -0.6rem;
-    border-radius: calc(var(--radius) + 8px);
-    border: 1px solid rgba(202, 162, 92, 0.14);
-    background: linear-gradient(180deg, rgba(202, 162, 92, 0.05), rgba(202, 162, 92, 0.01));
-    z-index: -1;
-  }
-
   .pricing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
